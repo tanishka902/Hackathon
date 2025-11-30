@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeartBridge - Connect Hearts, Share Hope</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modal-styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+    <link rel="stylesheet" href="login-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeartBridge - Connect Hearts, Share Hope</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modal-styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+    <link rel="stylesheet" href="login-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-heart"></i>
+                <span>HeartBridge</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#drives" class="nav-link">Active Drives</a>
+                <a href="#about" class="nav-link">About</a>
+                <div class="user-actions">
+                    <button class="btn-role donor" onclick="showLoginModal('donor')">
+                        <i class="fas fa-gift"></i> Donor Login
+                    </button>
+                    <button class="btn-role recipient" onclick="showLoginModal('recipient')">
+                        <i class="fas fa-hand-holding-heart"></i> Recipient Login
+                    </button>
+                    <button class="btn-role admin" onclick="showLoginModal('admin')">
+                        <i class="fas fa-cog"></i> Admin Login
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Connect Hearts</span>
+                    <span class="highlight">Share Hope</span>
+                </h1>
+                <p class="hero-subtitle">Join our vibrant community where generosity meets need. Together, we build bridges of compassion during life's most challenging moments.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">15,847</div>
+                        <div class="stat-label">Lives Touched</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">2,394</div>
+                        <div class="stat-label">Active Donors</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">89</div>
+                        <div class="stat-label">Emergency Drives</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-cards">
+                    <div class="donation-card food">
+                        <i class="fas fa-utensils"></i>
+                        <span>Food</span>
+                    </div>
+                    <div class="donation-card clothing">
+                        <i class="fas fa-tshirt"></i>
+                        <span>Clothing</span>
+                    </div>
+                    <div class="donation-card medical">
+                        <i class="fas fa-first-aid"></i>
+                        <span>Medical</span>
+                    </div>
+                    <div class="donation-card shelter">
+                        <i class="fas fa-home"></i>
+                        <span>Shelter</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Alert Banner -->
+    <div class="emergency-banner">
+        <div class="emergency-content">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span>URGENT: Flood Relief Drive Active - 2,847 families need immediate assistance</span>
+            <button class="emergency-btn">Help Now</button>
+        </div>
+    </div>
+
+    <!-- Active Drives Section -->
+    <section id="drives" class="drives-section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-fire"></i>
+                Active Emergency Drives
+            </h2>
+            <div class="drives-grid">
+                <div class="drive-card urgent">
+                    <div class="drive-header">
+                        <div class="drive-status">URGENT</div>
+                        <div class="drive-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Florida Coast
+                        </div>
+                    </div>
+                    <h3>Hurricane Relief Drive</h3>
+                    <p>Immediate need for food, water, and emergency supplies for 5,000+ displaced families.</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 67%"></div>
+                    </div>
+                    <div class="drive-stats">
+                        <span>67% Complete</span>
+                        <span>3 days left</span>
+                    </div>
+                    <div class="drive-needs">
+                        <span class="need-tag food">Food</span>
+                        <span class="need-tag water">Water</span>
+                        <span class="need-tag medical">Medical</span>
+                    </div>
+                </div>
+
+                <div class="drive-card active">
+                    <div class="drive-header">
+                        <div class="drive-status">ACTIVE</div>
+                        <div class="drive-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            California
+                        </div>
+                    </div>
+                    <h3>Wildfire Support Drive</h3>
+                    <p>Supporting families who lost homes in recent wildfires with clothing and essentials.</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 43%"></div>
+                    </div>
+                    <div class="drive-stats">
+                        <span>43% Complete</span>
+                        <span>8 days left</span>
+                    </div>
+                    <div class="drive-needs">
+                        <span class="need-tag clothing">Clothing</span>
+                        <span class="need-tag shelter">Shelter</span>
+                    </div>
+                </div>
+
+                <div class="drive-card community">
+                    <div class="drive-header">
+                        <div class="drive-status">COMMUNITY</div>
+                        <div class="drive-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Local Area
+                        </div>
+                    </div>
+                    <h3>Winter Warmth Drive</h3>
+                    <p>Collecting warm clothing and blankets for homeless shelters before winter arrives.</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 78%"></div>
+                    </div>
+                    <div class="drive-stats">
+                        <span>78% Complete</span>
+                        <span>12 days left</span>
+                    </div>
+                    <div class="drive-needs">
+                        <span class="need-tag clothing">Clothing</span>
+                        <span class="need-tag blankets">Blankets</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Role Modals -->
+    <div id="roleModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-heart"></i>
+                        <span>HeartBridge</span>
+                    </div>
+                    <p>Connecting hearts, sharing hope, building stronger communities together.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#drives">Active Drives</a>
+                    <a href="#about">About Us</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> help@heartbridge.org</p>
+                    <p><i class="fas fa-phone"></i> 1-800-HEART-BRIDGE</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="backend.js"></script>
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-heart"></i>
+                <span>HeartBridge</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#drives" class="nav-link">Active Drives</a>
+                <a href="#about" class="nav-link">About</a>
+                <div class="user-actions">
+                    <button class="btn-role donor" onclick="showLoginModal('donor')">
+                        <i class="fas fa-gift"></i> Donor Login
+                    </button>
+                    <button class="btn-role recipient" onclick="showLoginModal('recipient')">
+                        <i class="fas fa-hand-holding-heart"></i> Recipient Login
+                    </button>
+                    <button class="btn-role admin" onclick="showLoginModal('admin')">
+                        <i class="fas fa-cog"></i> Admin Login
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Connect Hearts</span>
+                    <span class="highlight">Share Hope</span>
+                </h1>
+                <p class="hero-subtitle">Join our vibrant community where generosity meets need. Together, we build bridges of compassion during life's most challenging moments.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">15,847</div>
+                        <div class="stat-label">Lives Touched</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">2,394</div>
+                        <div class="stat-label">Active Donors</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">89</div>
+                        <div class="stat-label">Emergency Drives</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-cards">
+                    <div class="donation-card food">
+                        <i class="fas fa-utensils"></i>
+                        <span>Food</span>
+                    </div>
+                    <div class="donation-card clothing">
+                        <i class="fas fa-tshirt"></i>
+                        <span>Clothing</span>
+                    </div>
+                    <div class="donation-card medical">
+                        <i class="fas fa-first-aid"></i>
+                        <span>Medical</span>
+                    </div>
+                    <div class="donation-card shelter">
+                        <i class="fas fa-home"></i>
+                        <span>Shelter</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Alert Banner -->
+    <div class="emergency-banner">
+        <div class="emergency-content">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span>URGENT: Flood Relief Drive Active - 2,847 families need immediate assistance</span>
+            <button class="emergency-btn">Help Now</button>
+        </div>
+    </div>
+
+    <!-- Active Drives Section -->
+    <section id="drives" class="drives-section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-fire"></i>
+                Active Emergency Drives
+            </h2>
+            <div class="drives-grid">
+                <div class="drive-card urgent">
+                    <div class="drive-header">
+                        <div class="drive-status">URGENT</div>
+                        <div class="drive-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Florida Coast
+                        </div>
+                    </div>
+                    <h3>Hurricane Relief Drive</h3>
+                    <p>Immediate need for food, water, and emergency supplies for 5,000+ displaced families.</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 67%"></div>
+                    </div>
+                    <div class="drive-stats">
+                        <span>67% Complete</span>
+                        <span>3 days left</span>
+                    </div>
+                    <div class="drive-needs">
+                        <span class="need-tag food">Food</span>
+                        <span class="need-tag water">Water</span>
+                        <span class="need-tag medical">Medical</span>
+                    </div>
+                </div>
+
+                <div class="drive-card active">
+                    <div class="drive-header">
+                        <div class="drive-status">ACTIVE</div>
+                        <div class="drive-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            California
+                        </div>
+                    </div>
+                    <h3>Wildfire Support Drive</h3>
+                    <p>Supporting families who lost homes in recent wildfires with clothing and essentials.</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 43%"></div>
+                    </div>
+                    <div class="drive-stats">
+                        <span>43% Complete</span>
+                        <span>8 days left</span>
+                    </div>
+                    <div class="drive-needs">
+                        <span class="need-tag clothing">Clothing</span>
+                        <span class="need-tag shelter">Shelter</span>
+                    </div>
+                </div>
+
+                <div class="drive-card community">
+                    <div class="drive-header">
+                        <div class="drive-status">COMMUNITY</div>
+                        <div class="drive-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Local Area
+                        </div>
+                    </div>
+                    <h3>Winter Warmth Drive</h3>
+                    <p>Collecting warm clothing and blankets for homeless shelters before winter arrives.</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 78%"></div>
+                    </div>
+                    <div class="drive-stats">
+                        <span>78% Complete</span>
+                        <span>12 days left</span>
+                    </div>
+                    <div class="drive-needs">
+                        <span class="need-tag clothing">Clothing</span>
+                        <span class="need-tag blankets">Blankets</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Role Modals -->
+    <div id="roleModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-heart"></i>
+                        <span>HeartBridge</span>
+                    </div>
+                    <p>Connecting hearts, sharing hope, building stronger communities together.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#drives">Active Drives</a>
+                    <a href="#about">About Us</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> help@heartbridge.org</p>
+                    <p><i class="fas fa-phone"></i> 1-800-HEART-BRIDGE</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="backend.js"></script>
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
